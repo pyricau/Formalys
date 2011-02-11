@@ -11,4 +11,6 @@ public interface ClientFactory
 	PlaceController getPlaceController();
 	HelloView getHelloView();
 	GoodbyeView getGoodbyeView();
+	TrainingServiceAsync getTrainingService();
+	
 }
