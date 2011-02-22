@@ -1,7 +1,8 @@
 package com.excilys.formation.formalys.client.mvp;
 
-import com.excilys.formation.formalys.client.place.GoodbyePlace;
-import com.excilys.formation.formalys.client.place.HelloPlace;
+import com.excilys.formation.formalys.client.place.CreateTrainingPlace;
+import com.excilys.formation.formalys.client.place.ListQuestionsPlace;
+import com.excilys.formation.formalys.client.place.ListTrainingsPlace;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
 
@@ -11,6 +12,6 @@ import com.google.gwt.place.shared.WithTokenizers;
  * annotation or by extending PlaceHistoryMapperWithFactory and creating a
  * separate TokenizerFactory.
  */
-@WithTokenizers( { HelloPlace.Tokenizer.class, GoodbyePlace.Tokenizer.class })
+@WithTokenizers( { CreateTrainingPlace.Tokenizer.class, ListTrainingsPlace.Tokenizer.class, ListQuestionsPlace.Tokenizer.class })
 public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {
 }

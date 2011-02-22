@@ -2,13 +2,10 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 			 xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.important {
-			font-weight: bold;
-		}
 	</ui:style>
 	<g:HTMLPanel>
-		Hello,
-		<span class="{style.important}" ui:field="nameSpan" />
-		<g:Anchor ui:field="goodbyeLink" text="Say good-bye"></g:Anchor>
+		<h1>Liste des formations</h1>	
+		<g:Button ui:field="createButton">Créer une formation</g:Button>
+		<g:FlowPanel ui:field="trainingList" />
 	</g:HTMLPanel>
 </ui:UiBinder>

@@ -1,16 +1,13 @@
 package com.excilys.formation.formalys.client.mvp;
 
 import com.excilys.formation.formalys.client.ClientFactory;
-import com.excilys.formation.formalys.client.activity.GoodbyeActivity;
-import com.excilys.formation.formalys.client.activity.HelloActivity;
-import com.excilys.formation.formalys.client.place.GoodbyePlace;
-import com.excilys.formation.formalys.client.place.HelloPlace;
-import com.google.gwt.activity.shared.AbstractActivity;
+import com.excilys.formation.formalys.client.activity.CreateTrainingActivity;
+import com.excilys.formation.formalys.client.activity.ListTrainingsActivity;
+import com.excilys.formation.formalys.client.place.CreateTrainingPlace;
+import com.excilys.formation.formalys.client.place.ListTrainingsPlace;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
-import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
-import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 public class AppActivityMapper implements ActivityMapper {
 
@@ -27,17 +24,12 @@ public class AppActivityMapper implements ActivityMapper {
 		this.clientFactory = clientFactory;
 	}
 
-	/**
-	 * Map each Place to its corresponding Activity. This would be a great use
-	 * for GIN.
-	 */
 	@Override
 	public Activity getActivity(Place place) {
-		// This is begging for GIN
-		if (place instanceof HelloPlace)
-			return new HelloActivity((HelloPlace) place, clientFactory);
-		else if (place instanceof GoodbyePlace)
-			return new GoodbyeActivity((GoodbyePlace) place, clientFactory);
+		if (place instanceof ListTrainingsPlace)
+			return new ListTrainingsActivity(clientFactory);
+		else if (place instanceof CreateTrainingPlace)
+			return new CreateTrainingActivity(clientFactory);
 
 		return null;
 	}

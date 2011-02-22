@@ -9,7 +9,7 @@ public class TrainingDTO implements Serializable{
 	
 	private Long id;
 	private String name;
-	private String nickname;
+	private String authorNickname;
 	private Date createdAt;
 	private QuestionState questionState;
 	private int questionCount;
@@ -18,10 +18,10 @@ public class TrainingDTO implements Serializable{
 	private TrainingDTO() {
 	}
 
-	public TrainingDTO(Long id, String name, String nickname, Date createdAt, QuestionState questionState, int questionCount) {
+	public TrainingDTO(Long id, String name, String authorNickname, Date createdAt, QuestionState questionState, int questionCount) {
 		this.id = id;
 		this.name = name;
-		this.nickname = nickname;
+		this.authorNickname = authorNickname;
 		this.createdAt = createdAt;
 		this.questionState = questionState;
 		this.questionCount = questionCount;
@@ -35,8 +35,8 @@ public class TrainingDTO implements Serializable{
 		return name;
 	}
 
-	public String getNickname() {
-		return nickname;
+	public String getAuthorNickname() {
+		return authorNickname;
 	}
 
 	public Date getCreatedAt() {

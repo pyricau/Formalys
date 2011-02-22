@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.emptyName {
+			color: red;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h1>Créer une formation</h1>
+		<g:Label ui:field="message" />
+		<g:HTMLPanel ui:field="createForm">
+			<div>
+				<g:InlineLabel>Nom de la formation</g:InlineLabel>
+				<g:TextBox ui:field="name" />
+				<g:InlineLabel ui:field="emptyName" addStyleNames="{style.emptyName}">Le
+					champs nom ne doit pas être vide.</g:InlineLabel>
+			</div>
+			<g:Button ui:field="create">Créer la formation</g:Button>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

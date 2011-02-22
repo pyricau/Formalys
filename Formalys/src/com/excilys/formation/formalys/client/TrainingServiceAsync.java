@@ -8,7 +8,7 @@ import com.excilys.formation.formalys.shared.TrainingDTO;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface TrainingServiceAsync {
-	void createTraining(String input, AsyncCallback<Void> callback);
+	void createTraining(String name, AsyncCallback<Void> callback);
 
 	void getTrainings(AsyncCallback<List<TrainingDTO>> callback);
 

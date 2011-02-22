@@ -2,7 +2,7 @@ package com.excilys.formation.formalys.client;
 
 import com.excilys.formation.formalys.client.mvp.AppActivityMapper;
 import com.excilys.formation.formalys.client.mvp.AppPlaceHistoryMapper;
-import com.excilys.formation.formalys.client.place.HelloPlace;
+import com.excilys.formation.formalys.client.place.ListTrainingsPlace;
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -19,7 +19,7 @@ import com.google.gwt.user.client.ui.SimplePanel;
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class Formalys implements EntryPoint {
-	private Place defaultPlace = new HelloPlace("World!");
+	private Place defaultPlace = new ListTrainingsPlace();
 	private SimplePanel appWidget = new SimplePanel();
 
 	/**
